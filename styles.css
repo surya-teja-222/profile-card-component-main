@@ -95,3 +95,31 @@ span {
     border-radius: 0 0 20px 20px;
     padding: 7% 7%;
 }
+#top-pattern {
+    position: absolute;
+    z-index: -1;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    size: auto;
+}
+
+#bottom-pattern {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    size: auto;
+}
+.pattern-top {
+    background-image: url('images/bg-pattern-top.svg');
+}
+
+.pattern-bottom {
+    background-image: url('images/bg-pattern-bottom.svg');
+}
