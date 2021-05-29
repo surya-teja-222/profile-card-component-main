@@ -1,10 +1,8 @@
-@import url('https://fonts.google.com/specimen/Kumbh+Sans');
 body {
     font-family: 'Kumbh Sans', sans-serif;
     background-color: hsl(185, 75%, 39%);
     text-align: center;
     overflow: hidden;
-    color: white;
 }
 body::before,
 body::after {
@@ -17,15 +15,35 @@ body::after {
 }
 
 body::before {
+    z-index: -1;
     background: url("images/bg-pattern-top.svg") no-repeat bottom right;
     top: 0;
     left: 0;
 }
 
 body::after {
+    z-index: -1;
     background: url("images/bg-pattern-bottom.svg") no-repeat top left;
     top: 100%;
     left: 100%;
+}
+#top-pattern {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    size: auto;
+}
+#bottom-pattern {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    size: auto;
 }
 hr {
     border: 0.1px solid hsl(0, 0%, 90%);
@@ -34,12 +52,10 @@ hr {
     border-right: none;
     margin: 0;
 }
-
-p {
+h3 {
     color: hsl(227, 10%, 46%);
     font-size: 12px;
 }
-
 span {
     color: hsl(227, 10%, 46%);
     font-weight: 400;
@@ -51,8 +67,16 @@ span {
     border-radius: 20px;
     margin: auto;
     margin: 120px auto;
-
 }
+
+.pattern-top {
+    background-image: url('images/bg-pattern-top.svg');
+}
+
+.pattern-bottom {
+    background-image: url('images/bg-pattern-bottom.svg');
+}
+
 
 #bg-section {
     height: 35%;
@@ -60,7 +84,6 @@ span {
     border-radius: 20px 20px 0 0;
 }
 
-/* Bio section */
 #bio-section {
     height: 40%;
     background-color: #FFF;
@@ -88,38 +111,11 @@ span {
     font-weight: 700;
 }
 
-/* Stats section */
+
 #stats-section {
     background-color: #FFF;
     height: 25%;
     border-radius: 0 0 20px 20px;
     padding: 7% 7%;
 }
-#top-pattern {
-    position: absolute;
-    z-index: -1;
-    /* width: 100vw; */
-    /* height: 100vh; */
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    size: auto;
-}
 
-#bottom-pattern {
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    top: 100%;
-    left: 100%;
-    transform: translate(-50%, -50%);
-    size: auto;
-}
-.pattern-top {
-    background-image: url('images/bg-pattern-top.svg');
-}
-
-.pattern-bottom {
-    background-image: url('images/bg-pattern-bottom.svg');
-}
